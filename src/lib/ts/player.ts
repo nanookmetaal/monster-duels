@@ -1,7 +1,7 @@
-import { Duellist } from "./duellist";
+import { Duellist } from './duellist';
 
 export class Player extends Duellist {
-  constructor(inName: string) {
-    super(inName);
-  }
+	constructor(inName: string) {
+		super(inName);
+	}
 }

@@ -1,11 +1,11 @@
 <script>
 	import { Player } from '$lib/ts/player';
-  import Button from '$lib/components/button.svelte';
+	import Button from '$lib/components/button.svelte';
 
 	const player = new Player('Leo');
 
-  function startGame() {
-    player.name = 'test';
+	function startGame() {
+		player.name = 'test';
 	}
 </script>
 
@@ -22,9 +22,9 @@
 		</p>
 	</div>
 
-  <div id="battle-field" class="hrzn">
-    <Button on:click={startGame} symbol='Start Game' bgColor={"#794044"}></Button>
-  </div>
+	<div id="battle-field" class="hrzn">
+		<Button on:click={startGame} symbol="Start Game" bgColor={'#794044'} />
+	</div>
 </div>
 
 <style>
@@ -34,13 +34,13 @@
 	}
 
 	.main {
-    display: flex;
+		display: flex;
 		background-color: rgb(224, 223, 223);
 		margin: 0;
 		padding: 0;
 		font-family: 'Franklin Gothic Medium';
 		color: rgb(30, 71, 56);
-    flex-direction: column;
+		flex-direction: column;
 		align-items: center;
 	}
 </style>

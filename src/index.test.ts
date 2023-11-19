@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest';
 import { Player } from '$lib/ts';
 
 describe('Player test', () => {
-  const testPlayer = new Player('TestPlayer');
+	const testPlayer = new Player('TestPlayer');
 
 	it('Can instantiate', () => {
 		expect(testPlayer.name).toContain('TestPlayer');
@@ -13,7 +13,7 @@ describe('Player test', () => {
 	});
 
 	it('Can remove health', () => {
-    testPlayer.removeHealth(2);
+		testPlayer.removeHealth(2);
 		expect(testPlayer.health).toEqual(8);
 	});
 });
