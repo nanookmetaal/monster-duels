@@ -1,11 +1,13 @@
 <script>
-	import { Player } from '$lib/ts/player';
 	import Button from '$lib/components/button.svelte';
+	import { Player } from '$lib/ts';
 
-	const player = new Player('Leo');
+  let gameActive = false;
+  const player = new Player('hero');
 
 	function startGame() {
-		player.name = 'test';
+    // change state to active game
+    gameActive = true;
 	}
 </script>
 
@@ -14,9 +16,10 @@
 		<h1>Welcome to Monster Duels</h1>
 	</div>
 
+  {#if !gameActive}
 	<div id="greeting" class="center">
 		<p>
-			Greetings, {player.name}. You have been chosen to fight the forces of evil. It will not be
+			Greetings, {player.name}, you have been chosen to fight the forces of evil. It will not be
 			easy. Many have been come before you and many more will follow. Begin your first fight when
 			you are ready.
 		</p>
@@ -25,6 +28,13 @@
 	<div id="battle-field" class="hrzn">
 		<Button on:click={startGame} symbol="Start Game" bgColor={'#794044'} />
 	</div>
+  {:else}
+	<div id="greeting" class="center">
+		<p>
+      Game Start
+		</p>
+	</div>
+  {/if}
 </div>
 
 <style>
