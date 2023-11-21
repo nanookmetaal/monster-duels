@@ -31,6 +31,7 @@
   {:else}
 	<div id="greeting" class="center">
 		<p>
+      <!-- battlefield component will go here -->
       Game Start
 		</p>
 	</div>
@@ -41,14 +42,14 @@
 	.center {
 		display: flex;
 		max-width: 900px;
+		font-family: 'Franklin Gothic Medium';
+    margin: 10px;
 	}
 
 	.main {
 		display: flex;
 		background-color: rgb(224, 223, 223);
-		margin: 0;
-		padding: 0;
-		font-family: 'Franklin Gothic Medium';
+    height: 100vh;
 		color: rgb(30, 71, 56);
 		flex-direction: column;
 		align-items: center;
