@@ -1,9 +1,10 @@
 <script>
 	import Button from '$lib/components/button.svelte';
+  import DuellistPanel from '$lib/components/duellistPanel.svelte';
 	import { Player } from '$lib/ts';
 
   let gameActive = false;
-  const player = new Player('hero');
+  const player = new Player('hero', 1, 'player.png');
 
 	function startGame() {
     // change state to active game
@@ -29,11 +30,8 @@
 		<Button on:click={startGame} symbol="Start Game" bgColor={'#794044'} />
 	</div>
   {:else}
-	<div id="greeting" class="center">
-		<p>
-      <!-- battlefield component will go here -->
-      Game Start
-		</p>
+	<div id="battlefield" class="center">
+    <DuellistPanel character={player}></DuellistPanel>
 	</div>
   {/if}
 </div>

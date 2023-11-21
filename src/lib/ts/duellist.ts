@@ -1,22 +1,33 @@
 export abstract class Duellist {
-	private _health: number;
 	private _name: string;
+	private _health: number;
+	private _attack: number;
+	private _portraitPath: string;
 
-	constructor(inName: string) {
+	constructor(name: string, attack: number, portraitPath: string) {
 		this._health = 10;
-		this._name = inName;
+		this._name = name;
+		this._attack = attack;
+		this._portraitPath = portraitPath;
+	}
+	public get name(): string {
+		return this._name;
 	}
 
 	public get health(): number {
 		return this._health;
 	}
 
-	public get name(): string {
-		return this._name;
+	public set attack(attack: number) {
+		this._attack = attack;
 	}
 
-	public set name(inName: string) {
-		this._name = inName;
+	public get attack(): number {
+		return this._attack;
+	}
+
+	public get portraitPath(): string {
+		return this._portraitPath;
 	}
 
 	public removeHealth(amount: number): number {
