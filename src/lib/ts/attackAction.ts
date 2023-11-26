@@ -1,6 +1,6 @@
-import { Action } from './action';
+import { BattleAction } from './battleAction';
 
-export class AttackAction extends Action {
+export class AttackAction extends BattleAction {
   constructor(id: string) {
     super(id, 0);
   }

@@ -20,11 +20,14 @@
 
 <style>
   .character-card {
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid rgba(0, 0, 0, 0.2);
     padding: 10px;
     text-align: center;
     width: 200px;
+    margin-left: 0.4em;
+    margin-right: 0.4em;
   }
 
   .character-image {
