@@ -8,7 +8,7 @@
 <div class="character-card">
   <img
     class="character-image"
-    src="./src/lib/assets/images/characters/{character.portraitPath}"
+    src="/images/characters/{character.portraitPath}"
     alt={character.name}
   />
   <div class="character-info">
