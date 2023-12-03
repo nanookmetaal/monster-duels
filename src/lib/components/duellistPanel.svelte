@@ -1,14 +1,16 @@
 <script lang="ts">
   import type { Duellist } from '$lib/ts';
+  import charImg from "$lib/images/characters/enemy-1.png";
 
   // Props for character data
   export let character: Duellist;
+
 </script>
 
 <div class="character-card">
   <img
     class="character-image"
-    src="/images/characters/{character.portraitPath}"
+    src={charImg}
     alt={character.name}
   />
   <div class="character-info">
