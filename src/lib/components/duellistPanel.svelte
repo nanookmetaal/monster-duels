@@ -1,16 +1,15 @@
 <script lang="ts">
   import type { Duellist } from '$lib/ts';
-  import charImg from "$lib/images/characters/enemy-1.png";
 
   // Props for character data
   export let character: Duellist;
-
+  const imageUrl = new URL(`/src/lib/images/characters/${character.portraitPath}`, import.meta.url).href;
 </script>
 
 <div class="character-card">
   <img
     class="character-image"
-    src={charImg}
+    src={imageUrl}
     alt={character.name}
   />
   <div class="character-info">
